@@ -12,7 +12,7 @@ def create_app():
 
     # Dynamically set CORS origins based on environment
     if os.getenv('FLASK_ENV') == 'development':
-        CORS(app, resources={r"/*": {"origins": ["http://localhost:3000", "http://127.0.0.1:5000"]}})
+        CORS(app, resources={r"/*": {"origins": ["http://localhost:3000", "http://127.0.0.1:5000", "http://localhost:5173"]}})
     else:
         CORS(app, resources={r"/*": {"origins": "https://resume-intelli.vercel.app"}})
 
