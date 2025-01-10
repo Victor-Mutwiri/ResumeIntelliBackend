@@ -1,0 +1,11 @@
+runtime: python311
+
+env_variables:
+  GROQ_API_KEY: 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
+  FLASK_ENV: production
+
+entrypoint: gunicorn -b :$PORT run:app
+
+handlers:
+  - url: /.*
+    script: auto
